@@ -1,0 +1,193 @@
+/*
+ Theme Name:   Ag Hall Lobby
+ Theme URI:    http://example.com/twenty-fifteen-child/
+ Description:  Twenty Fifteen Child Theme
+ Author:       John Doe
+ Author URI:   http://example.com
+ Template:     twentyfifteen
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twenty-fifteen-child
+*/
+::-webkit-scrollbar {
+    display: none;
+}
+body {
+  overflow: hidden;
+}
+#content {
+  margin-left:auto;
+}
+#soloimg {
+  position: absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+    background-position: center;
+}
+
+.call-action h4 r {
+  color:#b70101;
+}
+.call-action h4 w {
+  color:#fafafa;
+}
+.call-action {
+  position: absolute;
+  bottom:15px;
+  left:30px;
+  right:30px;
+  border-radius: 30px;
+  text-align: center;
+}
+.call-action h4 {
+  font-size:1.5em;
+  margin:0;
+  color:black;
+}
+
+
+.sidebar {
+  background-color:#F7F5E8;
+  position:absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  border-left:#DDDAC7 2px solid;
+  margin-right: auto;
+}
+.site-branding img {
+  width:100%;
+}
+
+.site-header {
+  margin:10% 0;
+}
+
+.site-header, .widget {
+  padding:0 5%;
+}
+.entry-header {
+  padding:0 .5%;
+  margin: -6% .3% -3%;
+}
+.entry-content {
+  padding:1em 2em;
+  font-size:1.2em;
+  font-family: 'Pontano Sans', sans-serif;
+  font-size:1.5em;
+}
+.entry-header h2,.entry-header h1, .entry-header h3 {
+  text-align: center;
+  margin-bottom: 5px;
+  font-family: 'Open Sans'
+}
+.entry-header h1, .entry-header h2 {
+  font-size:3em;
+}
+.entry-header h3 {
+  font-size:1.5em;
+  font-weight: normal;
+}
+.entry-content {
+}
+#colophon, .entry-footer {
+  display:none;
+}
+.hentry {
+  margin:0!important;
+}
+.site-main {
+  padding:0!important;
+}
+
+.owl-item article {
+  height:100vh;
+  background-color:#fafafa;
+}
+.owl-carousel .owl-item img {
+  width:inherit!important;
+}
+
+
+#weather {
+  width: 90%;
+  margin: 0px auto;
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size:20px;
+  position: relative;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  height:220px;
+  text-align: center;
+  position: relative;
+}
+#weather .pic {
+  position: absolute;
+  left:0;
+  top:2em;
+  width:180%;
+}
+#weather img {
+
+  z-index:1;
+}
+#weather .temp {
+  position: absolute;
+  right:25px;
+  font-size:4em;
+  z-index: 100;
+}
+#weather .now {
+  position: absolute;
+  top:160px;
+  left:0;
+  right:0;
+}
+#weather h2 {
+  margin: 0 0 -10px;
+  font-weight: 300;
+  font-size:1em;
+  z-index: 100;
+}
+.weatherTime {
+  font-size:.6em;
+  clear:both;
+  margin-top:-.4em;
+  display:block;
+}
+#weather ul {
+  margin: 0;
+  padding: 0;
+}
+
+#weather li {
+  background: #fff;
+  background: rgba(255,255,255,0.90);
+  padding: 20px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+
+#social {
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  text-align: center;
+}
+#social h2 {
+  font-weight: normal!important;
+  font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size:1.1848em;
+}
+#social li {
+  display: inline-block;
+  padding: 4px 4px;
+  font-size: .9em;
+  letter-spacing: -2px;
+}
