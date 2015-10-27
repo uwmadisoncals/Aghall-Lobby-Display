@@ -64,7 +64,7 @@ body {
 }
 
 .site-header {
-  margin:10% 0;
+  margin:5% 0;
 }
 
 .site-header, .widget {
@@ -129,7 +129,7 @@ body {
   position: absolute;
   left:0;
   top:2em;
-  width:180%;
+  width:190%;
 }
 #weather img {
 
@@ -137,15 +137,17 @@ body {
 }
 #weather .temp {
   position: absolute;
-  right:25px;
+  right:.4em;
+  top:.8em;
   font-size:4em;
   z-index: 100;
 }
 #weather .now {
   position: absolute;
-  top:160px;
+  top:10em;
   left:0;
   right:0;
+  z-index: 100;
 }
 #weather h2 {
   margin: 0 0 -10px;
@@ -172,18 +174,21 @@ body {
   border-radius: 5px;
 }
 
-
+#sidebar {
+    color: rgba(51, 51, 51, 0.7);
+}
 #social {
   position:absolute;
   bottom:0;
   left:0;
   right:0;
   text-align: center;
+
 }
 #social h2 {
   font-weight: normal!important;
   font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size:1.1848em;
+  font-size:1em
 }
 #social li {
   display: inline-block;

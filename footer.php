@@ -20,8 +20,19 @@
 				<button class="secondary-toggle"><?php _e( 'Menu and widgets', 'twentyfifteen' ); ?></button>
 			</div><!-- .site-branding -->
 		</header><!-- .site-header -->
-
-		<?php get_sidebar(); ?>
+        <div id="weather"></div>
+        <div id="social">
+    <h2>Get Social with <strong>UWMadisonCALS!</strong></h2>
+    <ul>
+        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/facebook.png" /></li>
+        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/twitter.png" /></li>
+        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/reddit.png" /></li> 
+        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/instagram.png" /></li></li> 
+        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/pinterest.png" /></li>
+        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/youtube.png" /></li></li>
+        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/linkedin.png" /></li></li> 
+    </ul>
+</div>
 	</div><!-- .sidebar -->
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">

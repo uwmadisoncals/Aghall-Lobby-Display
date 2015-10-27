@@ -28,17 +28,20 @@
 <link href='https://fonts.googleapis.com/css?family=Pontano+Sans|Open+Sans:300,700|Lato:700|Fredoka+One|Patua+One|Nixie+One|Forum|Corben:700|Concert+One|Averia+Serif+Libre:700|Averia+Libre:700' rel='stylesheet' type='text/css'>
 
 <script type="text/javascript">
-$(function() {
+    $(document).ready(function() {  
+  getWeather(); //Get the initial weather.
+  setInterval(getWeather, 600000); //Update the weather every 10 minutes.
+});
 
+function getWeather() {
 			$.simpleWeather({
-				 	location:'madison, wi',
+				 	location:'madison,wi',
 					unit: 'f',
 					success: function(weather) {
 						html = '<h2>Today&rsquo;s Weather is Currently:<br />'+weather.currently+'</h2>';
 						html += '<img class="pic"  src="'+weather.image+'">';
 						html += '<div class="temp"><p>'+weather.temp+'&deg;</p></div>';
 						html += '<p class="now">High: '+weather.high+'&deg; / Low: '+weather.low+'&deg;<br/>';
-						html += '<span class="weatherTime">'+weather.updated+'</span></p>';
 
 						$("#weather").html(html);
 					},
@@ -46,7 +49,7 @@ $(function() {
 						$("#weather").html('<p>'+error+'</p>');
 					}
 		});
-});
+}
 
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel({
@@ -54,9 +57,9 @@ $(document).ready(function(){
 		loop:true,
 		autoplay:true,
 		autoplayTimeout:11111,
-		smartSpeed:555,
-		mouseDrag: true,
-		lazyLoad: false,
+		smartSpeed:1111,
+		mouseDrag: false,
+		lazyLoad: true,
 	});
 });
 
