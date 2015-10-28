@@ -59,7 +59,7 @@ $(document).ready(function(){
 		autoplayTimeout:11111,
 		smartSpeed:1111,
 		mouseDrag: false,
-		lazyLoad: true,
+		lazyLoad: false,
 	});
 });
 
