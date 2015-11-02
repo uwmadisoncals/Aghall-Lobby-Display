@@ -70,12 +70,10 @@ if(function_exists("register_field_group"))
 				'key' => 'field_5626accea32da',
 				'label' => 'Use a Solo Image?',
 				'name' => 'use_a_solo_image',
-				'type' => 'radio',
+				'type' => 'checkbox',
 				'instructions' => 'Replace Slide Contents with an Image',
 				'choices' => array (
 					'yes' => 'Yes',
-					'no' => 'No',
-					'remove' => '(Remove)',
 				),
 				'other_choice' => 0,
 				'save_other_choice' => 0,

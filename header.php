@@ -60,6 +60,7 @@ $(document).ready(function(){
 		smartSpeed:1111,
 		mouseDrag: false,
 		lazyLoad: false,
+        lazyContent: false,
 	});
 });
 
