@@ -15,7 +15,7 @@
 	<div id="sidebar" class="sidebar">
 		<header id="masthead" class="site-header" role="banner">
 			<div class="site-branding">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/uw_logo.png" />
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cals_logo_bw.svg" />
 
 				<button class="secondary-toggle"><?php _e( 'Menu and widgets', 'twentyfifteen' ); ?></button>
 			</div><!-- .site-branding -->

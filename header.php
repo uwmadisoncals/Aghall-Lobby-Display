@@ -34,21 +34,22 @@
 });
 
 function getWeather() {
-			$.simpleWeather({
-				 	location:'madison,wi',
-					unit: 'f',
-					success: function(weather) {
-						html = '<h2>Today&rsquo;s Weather is Currently:<br />'+weather.currently+'</h2>';
-						html += '<img class="pic"  src="'+weather.image+'">';
-						html += '<div class="temp"><p>'+weather.temp+'&deg;</p></div>';
-						html += '<p class="now">High: '+weather.high+'&deg; / Low: '+weather.low+'&deg;<br/>';
+      $.simpleWeather({
+    location:'madison, wi',
+    woeid: '',
+    unit: 'f',
+    success: function(weather) {
+      html = '<i class="icon-'+weather.code+'"></i>';
+      html += '<h2>'+weather.temp+'&deg;</h2>';
+      html += '<h3 class="currently">'+weather.currently+'</h3>';
+  
+      $("#weather").html(html);
+    },
+    error: function(error) {
+      $("#weather").html('<p>'+error+'</p>');
+    }
+  });
 
-						$("#weather").html(html);
-					},
-					error: function(error) {
-						$("#weather").html('<p>'+error+'</p>');
-					}
-		});
 }
 
 $(document).ready(function(){
