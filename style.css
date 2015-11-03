@@ -51,7 +51,8 @@ body {
 
 
 .sidebar {
-  background-color:#F7F5E8;
+  background-color:#EFE8D8;
+  color: rgba(51, 51, 51, 0.7);
   position:absolute;
   top:0;
   bottom:0;
@@ -174,9 +175,6 @@ body {
   border-radius: 5px;
 }
 
-#sidebar {
-    color: rgba(51, 51, 51, 0.7);
-}
 #social {
   position:absolute;
   bottom:0;
