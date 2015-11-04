@@ -16,7 +16,9 @@
 		// Post thumbnail.
 		twentyfifteen_post_thumbnail();
 	?>
-	<div id="soloimg" style="background-image:url(<?php the_field('solo_image'); ?>)">
+	<div id="soloimg" class="noblur" style="background-image:url(<?php the_field('solo_image'); ?>)">
+	</div>
+    <div id="soloimg" class="blurred" style="background-image:url(<?php the_field('solo_image'); ?>)">
 	</div>
 	<header class="entry-header">
 		<?php

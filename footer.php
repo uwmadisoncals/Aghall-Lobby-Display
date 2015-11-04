@@ -22,14 +22,13 @@
 		</header><!-- .site-header -->
         <div id="weather"></div>
         <div id="social">
-    <h2>Get Social with <strong>UWMadisonCALS!</strong></h2>
+    <h2>Get Social with <big>UWMadisonCALS</big></h2>
     <ul>
         <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/facebook.png" /></li>
         <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/twitter.png" /></li>
-        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/reddit.png" /></li> 
         <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/instagram.png" /></li></li> 
         <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/pinterest.png" /></li>
-        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/youtube.png" /></li></li>
+        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/reddit.png" /></li> 
         <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/linkedin.png" /></li></li> 
     </ul>
 </div>

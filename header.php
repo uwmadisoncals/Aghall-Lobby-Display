@@ -25,8 +25,7 @@
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/owl.carousel.min.js"></script>
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/owl.carousel.min.css">
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/owl.theme.default.min.css">
-<link href='https://fonts.googleapis.com/css?family=Pontano+Sans|Open+Sans:300,700|Lato:700|Fredoka+One|Patua+One|Nixie+One|Forum|Corben:700|Concert+One|Averia+Serif+Libre:700|Averia+Libre:700' rel='stylesheet' type='text/css'>
-
+<link href='https://fonts.googleapis.com/css?family=Pontano+Sans|Open+Sans:300,700|Quicksand:300,400|Roboto+Mono:300' rel='stylesheet' type='text/css'>
 <script type="text/javascript">
     $(document).ready(function() {  
   getWeather(); //Get the initial weather.
@@ -35,12 +34,12 @@
 
 function getWeather() {
       $.simpleWeather({
-    location:'madison, wi',
+    location:'madison,wi',
     woeid: '',
     unit: 'f',
     success: function(weather) {
       html = '<i class="icon-'+weather.code+'"></i>';
-      html += '<h2>'+weather.temp+'&deg;</h2>';
+      html += '<h2>'+weather.temp+'<nogap>&deg;</nogap></h2>';
       html += '<h3 class="currently">'+weather.currently+'</h3>';
   
       $("#weather").html(html);
@@ -58,7 +57,7 @@ $(document).ready(function(){
 		loop:true,
 		autoplay:true,
 		autoplayTimeout:11111,
-		smartSpeed:1111,
+		smartSpeed:777,
 		mouseDrag: false,
 		lazyLoad: false,
         lazyContent: false,
