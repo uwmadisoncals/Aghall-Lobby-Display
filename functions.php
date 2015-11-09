@@ -1,11 +1,11 @@
 <?php
 
-function five_posts_on_homepage( $query ) {
-    if ( $query->is_home() && $query->is_main_query() ) {
-        $query->set( 'posts_per_page', 5 );
-    }
-}
-add_action( 'pre_get_posts', 'five_posts_on_homepage' );
+//function five_posts_on_homepage( $query ) {
+//    if ( $query->is_home() && $query->is_main_query() ) {
+//        $query->set( 'posts_per_page', 5 );
+//    }
+//}
+//add_action( 'pre_get_posts', 'five_posts_on_homepage' );
 
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
@@ -21,22 +21,164 @@ function custom_excerpt_length( $length ) {
 	return 5;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+//Custom Fields:
+
 if(function_exists("register_field_group"))
 {
 	register_field_group(array (
-		'id' => 'acf_image',
-		'title' => 'Image',
+		'id' => 'acf_slide-options',
+		'title' => 'Slide Options',
 		'fields' => array (
 			array (
-				'key' => 'field_563a70d9ede38',
-				'label' => 'Slide Image',
+				'key' => 'field_5640fc0ae3e09',
+				'label' => 'Type of Slide',
+				'name' => 'imgVtxt',
+				'type' => 'radio',
+				'required' => 1,
+				'choices' => array (
+					'image' => 'Image Slide',
+					'text' => 'Textbased Slide',
+				),
+				'other_choice' => 0,
+				'save_other_choice' => 0,
+				'default_value' => 'image',
+				'layout' => 'horizontal',
+			),
+			array (
+				'key' => 'field_5626ad537aa29',
+				'label' => 'Upload Image',
 				'name' => 'solo_image',
 				'type' => 'image',
-				'instructions' => 'Images should be 1280px by 720px with a 384px right gutter.',
-				'required' => 1,
+				'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => 'field_5640fc0ae3e09',
+							'operator' => '==',
+							'value' => 'image',
+						),
+					),
+					'allorany' => 'all',
+				),
 				'save_format' => 'url',
-				'preview_size' => 'post-thumbnail',
+				'preview_size' => 'full',
 				'library' => 'all',
+			),
+			array (
+				'key' => 'field_56269f176473d',
+				'label' => 'Sub-Heading',
+				'name' => 'sub_heading',
+				'type' => 'text',
+				'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => 'field_5640fc0ae3e09',
+							'operator' => '==',
+							'value' => 'text',
+						),
+					),
+					'allorany' => 'all',
+				),
+				'default_value' => '',
+				'placeholder' => 'Appears beneath Title',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5640fd456cd3f',
+				'label' => 'Content',
+				'name' => 'text_content',
+				'type' => 'wysiwyg',
+				'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => 'field_5640fc0ae3e09',
+							'operator' => '==',
+							'value' => 'text',
+						),
+					),
+					'allorany' => 'all',
+				),
+				'default_value' => '',
+				'toolbar' => 'full',
+				'media_upload' => 'yes',
+			),
+			array (
+				'key' => 'field_5626aa975aa23',
+				'label' => 'Call to Action',
+				'name' => 'call_to_action',
+				'type' => 'text',
+				'instructions' => 'Text within <r>...</r> will be red.<br />Use <w>...</w> for white.',
+				'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => 'field_5640fc0ae3e09',
+							'operator' => '==',
+							'value' => 'text',
+						),
+					),
+					'allorany' => 'all',
+				),
+				'default_value' => '',
+				'placeholder' => 'Black next to <r>Red</r> and <w>White</w>',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5627dcf9d29fb',
+				'label' => 'Call to Action Background Color',
+				'name' => 'cta_color',
+				'type' => 'text',
+				'instructions' => 'Insert Color Hex Code, Use # ',
+				'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => 'field_5640fc0ae3e09',
+							'operator' => '==',
+							'value' => 'text',
+						),
+					),
+					'allorany' => 'all',
+				),
+				'default_value' => '',
+				'placeholder' => '#B70101',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5640fef1cc8b9',
+				'label' => 'Slide Background Color',
+				'name' => 'slide_bg_color',
+				'type' => 'text',
+				'instructions' => 'Insert Color Hex Code, Use # ',
+				'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => 'field_5640fc0ae3e09',
+							'operator' => '==',
+							'value' => 'text',
+						),
+					),
+					'allorany' => 'all',
+				),
+				'default_value' => '#E0E0E0',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
 			),
 		),
 		'location' => array (

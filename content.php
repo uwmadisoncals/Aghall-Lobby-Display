@@ -11,7 +11,7 @@
 ?>
 
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> style="background-color:<?php the_field('slide_bg_color'); ?>">
 	<?php
 		// Post thumbnail.
 		twentyfifteen_post_thumbnail();
@@ -32,7 +32,7 @@
 
 	</header><!-- .entry-header -->
 	<div class="entry-content">
-		<?php the_content(); ?>
+		<?php the_field('text_content');  ?>
 	
 	</div><!-- .entry-content -->
 <aside class="call-action" style="background-color:<?php the_field('cta_color'); ?>">

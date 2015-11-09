@@ -12,6 +12,8 @@
  Text Domain:  twenty-fifteen-child
 */
 
+/* Fonts for Weather */
+
 @font-face {
     font-family: 'weather';
     src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot');
@@ -22,6 +24,8 @@
     font-weight: normal;
     font-style: normal;
 }
+
+/* GENERAL STYLES */
 
 html {
   width: 100%;
@@ -39,11 +43,39 @@ body {
   font: 13px 'Open Sans', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
+#colophon, .entry-footer {
+  display:none;
+}
+
+
+
+
+/* SLIDES */
 
 #content {
   margin-left:auto;
     width:100%;
 }
+.hentry {
+  margin:0!important;
+}
+.site-main {
+  padding:0!important;
+}
+
+/* Owl Carousel */
+
+.owl-item article {
+  height:100vh;
+  background-color:#fafafa;
+}
+.owl-carousel .owl-item img {
+  width:inherit!important;
+}
+
+
+/* IMAGE SLIDES */
+
 #soloimg {
   position: absolute;
   top:0;
@@ -62,6 +94,39 @@ body {
     
 }
 
+/* TEXT SLDIES */
+
+/* Header */
+
+.entry-header {
+  padding:0 .5%;
+  margin: -6% 30% -3% .3%;
+}
+.entry-header h2,.entry-header h1, .entry-header h3 {
+  text-align: center;
+  margin-bottom: 5px;
+  font-family: 'Open Sans';
+}
+.entry-header h1, .entry-header h2 {
+  font-size:6em;
+}
+.entry-header h3 {
+  font-size:4.4em;
+  font-weight: normal;
+}
+
+/* Content */
+
+.entry-content {
+    padding: 1.5em 1em 0;
+    font-size: 2.5em;
+    line-height: 1.8em;
+  font-family: 'Pontano Sans', sans-serif;
+  margin-right:30%;
+}
+
+/* Call to Action */
+
 .call-action h4 r {
   color:#b70101;
 }
@@ -72,15 +137,23 @@ body {
   position: absolute;
   bottom:15px;
   left:30px;
-  right:30px;
+  right:420px;
   border-radius: 30px;
   text-align: center;
 }
 .call-action h4 {
-  font-size:1.5em;
+  font-size:2.5em;
+    padding:10px 0;
   margin:0;
   color:black;
 }
+
+
+
+
+
+
+/* SIDE BAR */
 
 
 .sidebar {
@@ -93,7 +166,7 @@ body {
   bottom:0;
   right:0;
 /*  border-left:rgba(255,255,255,.5) 2px solid;*/
-    box-shadow: -1px 0px 4px rgba(0,0,0,.8);
+    box-shadow: 0px 0px 10px rgba(0,0,0,.8);
   margin-right: auto;
 }
 .site-branding img {
@@ -103,51 +176,10 @@ body {
 .site-header {
   margin:5% 0;
 }
-
 .site-header, .widget {
   padding:0 5%;
 }
-.entry-header {
-  padding:0 .5%;
-  margin: -6% .3% -3%;
-}
-.entry-content {
-  padding:1em 2em;
-  font-size:1.2em;
-  font-family: 'Pontano Sans', sans-serif;
-  font-size:1.5em;
-}
-.entry-header h2,.entry-header h1, .entry-header h3 {
-  text-align: center;
-  margin-bottom: 5px;
-  font-family: 'Open Sans'
-}
-.entry-header h1, .entry-header h2 {
-  font-size:3em;
-}
-.entry-header h3 {
-  font-size:1.5em;
-  font-weight: normal;
-}
-.entry-content {
-}
-#colophon, .entry-footer {
-  display:none;
-}
-.hentry {
-  margin:0!important;
-}
-.site-main {
-  padding:0!important;
-}
 
-.owl-item article {
-  height:100vh;
-  background-color:#fafafa;
-}
-.owl-carousel .owl-item img {
-  width:inherit!important;
-}
 
 
 #weather {
@@ -238,9 +270,9 @@ i {
     right:0;
 */
     position: relative;
-    left:180px;
+    left:185px;
     top:-37px;
-    height: 70px;
+    height: 80px;
     width:50px;
     line-height: 38px;
     
