@@ -74,26 +74,6 @@ body {
 }
 
 
-/* IMAGE SLIDES */
-
-#soloimg {
-  position: absolute;
-  top:0;
-  bottom:0;
-    right:0;
-}
-.noblur {
-    left:0;
-  background-position: left;
-}
-.blurred {
-    left:70%;
-  background-position: right;
-    filter:blur(3px);
-        -webkit-filter: blur(3px); 
-    
-}
-
 /* TEXT SLDIES */
 
 /* Header */
@@ -150,6 +130,28 @@ body {
 
 
 
+/* IMAGE SLIDES */
+
+#soloimg {
+  position: absolute;
+  top:0;
+  bottom:0;
+    right:0;
+}
+.noblur {
+    left:0;
+  background-position: left;
+}
+.blurred {
+    left:70%;
+    margin: -10px -10px -10px -4px;
+  background-position: right;
+    filter: blur(10px);
+        -webkit-filter: blur(10px);
+    
+}
+
+
 
 
 
@@ -158,7 +160,7 @@ body {
 
 .sidebar {
     z-index: 5;
-    background-color: rgba(0,0,0,.7);
+    background-color: rgba(0,0,0,.44);
     width:30%!important;
   color:white;
   position:absolute;
@@ -166,7 +168,7 @@ body {
   bottom:0;
   right:0;
 /*  border-left:rgba(255,255,255,.5) 2px solid;*/
-    box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+    box-shadow: -1px 0px 5px rgba(0,0,0,.9);
   margin-right: auto;
 }
 .site-branding img {
@@ -259,7 +261,7 @@ i {
     text-align: right;
 }
 #weather nogap {
-    margin-left: -5px;
+    margin-left: -2px;
 }
 #weather h3 { 
     font-size: 3em;
