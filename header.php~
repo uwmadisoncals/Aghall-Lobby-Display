@@ -34,7 +34,8 @@
 
 function getWeather() {
       $.simpleWeather({
-    woeid: '12781045', //12781045
+    location:'madison,wi',
+    woeid: '12781045',
     unit: 'f',
     success: function(weather) {
       html = '<i class="icon-'+weather.code+'"></i>';
