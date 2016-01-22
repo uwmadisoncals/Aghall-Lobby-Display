@@ -143,13 +143,25 @@ body {
   background-position: left;
 }
 .blurred {
-    left:70%;
+   left:0px;
     margin: -10px -10px -10px -4px;
   background-position: right;
-    filter: blur(10px);
-        -webkit-filter: blur(10px);
-    
+    filter: blur(20px);
+        -webkit-filter: blur(20px);
+		
 }
+
+.mask {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	bottom: 0px;
+	overflow: hidden;
+	
+}
+
+
 
 
 
@@ -160,7 +172,8 @@ body {
 
 .sidebar {
     z-index: 5;
-    background-color: rgba(0,0,0,.44);
+    background-color: rgba(0,0,0,.5);
+   
     width:30%!important;
   color:white;
   position:absolute;
@@ -168,7 +181,7 @@ body {
   bottom:0;
   right:0;
 /*  border-left:rgba(255,255,255,.5) 2px solid;*/
-    box-shadow: -1px 0px 5px rgba(0,0,0,.9);
+   box-shadow: 0px 3px 34px rgba(0,0,0,0.4);
   margin-right: auto;
 }
 .site-branding img {
@@ -176,23 +189,24 @@ body {
 }
 
 .site-header {
-  margin:5% 0;
+  margin:10% 0;
 }
 .site-header, .widget {
-  padding:0 5%;
+  padding:0 10%;
 }
 
 
 
 #weather {
     width:90%;
-    margin: -25px auto;
+    margin: 0px auto;
+    margin-top: 50px;
     position: relative;
     text-align: center;
 }
 
 i {
-  color: #fff;
+  color: rgba(255,255,255,0.3);
   font-family: weather;
   font-size: 18.48em;
   font-weight: normal;
@@ -250,12 +264,13 @@ i {
 .icon-47:before { content: "S"; }
 
 #weather h2 {
-  font-size: 7em;
+  font-size: 5em;
+  color: rgba(255,255,255,0.6);
   font-weight: normal;
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
     position: absolute;
     top:190px;
-    right:175px;
+    right:195px;
   font-family:"quicksand",Arial, "Lucida Grande", sans-serif;
     letter-spacing: -7px;
     text-align: right;
@@ -264,7 +279,8 @@ i {
     margin-left: -2px;
 }
 #weather h3 { 
-    font-size: 3em;
+    font-size: 2.5em;
+    color: rgba(255,255,255,0.6);
   font-weight: normal;
 /*
     position: absolute;
@@ -274,20 +290,22 @@ i {
     position: relative;
     left:185px;
     top:-37px;
-    height: 80px;
-    width:50px;
-    line-height: 38px;
     
-    word-wrap: break-word;
-    display: table-cell;
+    
+    line-height: 1;
+    
+    width: 140px;
+    display: block;
     vertical-align: middle;
     text-align: left;
     font-family:"quicksand",Arial, "Lucida Grande", sans-serif;
     letter-spacing: -2px;
+    
 }
 
 #weather .currently {
-  margin: 0 20px;
+  margin: 0px;
+  padding: 0px;
 }
 
 
@@ -297,13 +315,14 @@ i {
   left:0;
   right:0;
   text-align: center;
+ 
 
 }
 #social h2 {
   font-weight: 300!important;
   font-family:"quicksand",Arial, "Lucida Grande", sans-serif;
-  font-size:2em;
-    letter-spacing: -3px;
+  font-size:1.8em;
+    letter-spacing: -2px;
 }
 
 #social h2 big {

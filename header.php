@@ -13,6 +13,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">
+	<META HTTP-EQUIV="refresh" CONTENT="21600">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<!--[if lt IE 9]>
@@ -26,6 +27,11 @@
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/owl.carousel.min.css">
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/owl.theme.default.min.css">
 <link href='https://fonts.googleapis.com/css?family=Pontano+Sans|Open+Sans:300,700|Quicksand:300,400|Roboto+Mono:300' rel='stylesheet' type='text/css'>
+
+<script src="https://npmcdn.com/flickity@1.1/dist/flickity.pkgd.min.js"></script>
+<link rel="stylesheet" href="https://npmcdn.com/flickity@1.1/dist/flickity.min.css">
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/main.css">
+
 <script type="text/javascript">
     $(document).ready(function() {  
   getWeather(); //Get the initial weather.
@@ -51,7 +57,7 @@ function getWeather() {
 }
 
 $(document).ready(function(){
-  $(".owl-carousel").owlCarousel({
+  /*$(".owl-carousel").owlCarousel({
 		items:1,
 		loop:true,
 		autoplay:true,
@@ -60,6 +66,34 @@ $(document).ready(function(){
 		mouseDrag: false,
 		lazyLoad: false,
         lazyContent: false,
+        transitionStyle : false,
+	});*/
+	
+	
+	$('.main-gallery').flickity({
+	  // options
+	  cellSelector: '.gallery-cell',
+	  cellAlign: 'left',
+	  contain: true,
+	  autoPlay: true,
+	  autoPlay: 12000,
+	  wrapAround: true,
+	  prevNextButtons: false,
+	  pageDots: false
+	});
+	
+	var windowW = $(window).width();
+	var sideW = $(".sidebar").width();
+	var newWidth = windowW - sideW;
+	
+	$(".mask").css("margin-left",newWidth);
+	
+	$(window).resize(function() {
+		var windowW = $(window).width();
+	var sideW = $(".sidebar").width();
+	var newWidth = windowW - sideW;
+	
+	$(".mask").css("margin-left",newWidth);
 	});
 });
 
