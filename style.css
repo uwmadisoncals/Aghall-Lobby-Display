@@ -189,10 +189,10 @@ body {
 }
 
 .site-header {
-  margin:10% 0;
+  margin:13% 0;
 }
 .site-header, .widget {
-  padding:0 10%;
+  padding:0 13%;
 }
 
 
@@ -315,13 +315,14 @@ i {
   left:0;
   right:0;
   text-align: center;
- 
+  margin-bottom: 2em;
 
 }
 #social h2 {
   font-weight: 300!important;
   font-family:"quicksand",Arial, "Lucida Grande", sans-serif;
-  font-size:1.8em;
+  font-size:1.6em;
+  margin-bottom: 0.3em;
     letter-spacing: -2px;
 }
 
@@ -335,7 +336,7 @@ i {
   padding: 4px 6px;
 }
 #social li img {
-    width:3.4em;
+    width:2.7em;
 /*        -webkit-filter: invert(100%);*/
 /*    filter: invert(100%);*/
 }
