@@ -45,7 +45,7 @@ function getWeather() {
     success: function(weather) {
       html = '<i class="icon-'+weather.code+'"></i>';
       html += '<h2>'+weather.temp+'<nogap>&deg;</nogap></h2>';
-      html += '<h3 class="currently">'+weather.currently+'</h3>';
+      html += '<div class="desc"><h3 class="currently">'+weather.currently+'</h3></div>';
   
       $("#weather").html(html);
     },
