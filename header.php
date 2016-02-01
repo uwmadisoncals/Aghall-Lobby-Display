@@ -79,7 +79,8 @@ $(document).ready(function(){
 	  autoPlay: 12000,
 	  wrapAround: true,
 	  prevNextButtons: false,
-	  pageDots: false
+	  pageDots: false,
+	  pauseAutoPlayOnHover: false
 	});
 	
 	var windowW = $(window).width();
