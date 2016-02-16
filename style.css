@@ -49,7 +49,6 @@ body {
 
 
 
-
 /* SLIDES */
 
 #content {
@@ -63,15 +62,6 @@ body {
   padding:0!important;
 }
 
-/* Owl Carousel */
-
-.owl-item article {
-  height:100vh;
-  background-color:#fafafa;
-}
-.owl-carousel .owl-item img {
-  width:inherit!important;
-}
 
 
 /* TEXT SLDIES */
@@ -133,24 +123,22 @@ body {
 /* IMAGE SLIDES */
 
 #soloimg {
-  position: absolute;
-  top:0;
-  bottom:0;
-    right:0;
+   position: absolute;
+   top:0;
+   bottom:0;
+   right:0;
 }
 .noblur {
-    left:0;
-  background-position: left;
+	left:0;
+   background-position: left;
 }
 .blurred {
    left:0px;
-    margin: -10px -10px -10px -4px;
-  background-position: right;
-    filter: blur(20px);
-        -webkit-filter: blur(20px);
-		
+   margin: -10px -10px -10px -4px;
+	background-position: right;
+   filter: blur(20px);
+   -webkit-filter: blur(20px);
 }
-
 .mask {
 	position: absolute;
 	top: 0px;
@@ -158,69 +146,51 @@ body {
 	left: 0px;
 	bottom: 0px;
 	overflow: hidden;
-	
 }
-
-
-
-
 
 
 
 /* SIDE BAR */
 
-
 .sidebar {
-    z-index: 5;
-    background-color: rgba(0,0,0,.5);
-   
-    width:30%!important;
-  color:white;
-  position:absolute;
-  top:0;
-  bottom:0;
-  right:0;
+	z-index: 5;
+   background-color: rgba(0,0,0,.5);
+   width:30%!important;
+   color:white;
+   position:absolute;
+   top:0;
+   bottom:0;
+   right:0;
 /*  border-left:rgba(255,255,255,.5) 2px solid;*/
    box-shadow: 0px 3px 34px rgba(0,0,0,0.4);
-  margin-right: auto;
+   margin-right: auto;
 }
 .site-branding img {
   width:100%;
 }
-
-.site-header {
-<<<<<<< HEAD
-  margin:12% 0;
-}
 .site-header, .widget {
   padding:0 12%;
-=======
   margin:13% 0;
 }
-.site-header, .widget {
-  padding:0 13%;
->>>>>>> origin/master
-}
 
-
+/* Weather Display */
 
 #weather {
 	font-size:2rem;
-    width:90%;
-    margin: 0px auto 0;
-    margin-top: 50px;
-    position: relative;
-    text-align: center;
+   width:90%;
+   margin: 50px auto 0;
+   position: relative;
+   text-align: center;
 }
-
 i {
   color: rgba(255,255,255,0.6);
   font-family: weather;
   font-size: 18.48em;
   font-style: normal;
   line-height: 1.0;
+  top:-25px;
+  position: relative;
 }
-
 .icon-0:before { content: ":"; }
 .icon-1:before { content: "p"; }
 .icon-2:before { content: "S"; }
@@ -275,7 +245,7 @@ i {
   color: rgba(255,255,255,0.7);
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
   position: absolute;
-  right:56%;
+  right:54%;
   text-align: right;
   font-family:"quicksand",Arial, "Lucida Grande", sans-serif;
   letter-spacing: -10px;
@@ -284,13 +254,15 @@ i {
 #weather nogap {
     margin-left: -2px;
     font-weight: normal;
+    font-size: .7em;
+    vertical-align: text-top;
 }
 #weather .desc {
 	display: flex;
 	align-items: center;
     height: 60px;
     position: relative;
-    left:48%;
+    left:49%;
     top:-1.7em;
     width:60%;
 }
@@ -303,12 +275,12 @@ i {
     letter-spacing: -4px;
 	line-height: .963;
 }
-
 #weather .currently {
   margin: 0px;
   padding: 0px;
 }
 
+/* Social Icons */
 
 #social {
   position:absolute;
@@ -325,18 +297,31 @@ i {
   margin-bottom: 0.3em;
     letter-spacing: -2px;
 }
-
 #social h2 big {
     font-size:inherit;
-    font-weight: 400;
+    font-weight: 500;
 }
-
 #social li {
   display: inline-block;
   padding: 4px 6px;
 }
 #social li img {
     width:2.7em;
-/*        -webkit-filter: invert(100%);*/
-/*    filter: invert(100%);*/
 }
+
+
+
+@media (max-width: 1290px) {
+	i {
+		font-size: 11em;	
+ 		top:-50px;
+	}
+	#weather h2 {
+		font-size: 4em;
+	}
+	#weather .desc h3 {
+		font-size: 1.8em;
+	}
+	#weather .desc {
+		height: 20px;	
+	}
