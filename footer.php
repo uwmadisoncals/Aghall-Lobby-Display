@@ -21,6 +21,21 @@
 			</div><!-- .site-branding -->
 		</header><!-- .site-header -->
         <div id="weather"></div>
+
+<div class="busTimes">
+	<div class="colleft">
+		<div class="col1">
+            <div class="estimates" id="0573-estimates">stuff</div>
+		</div>
+		<div class="col2">
+           <div class="estimates" id="0184-estimates">stuff</div>
+		</div>
+	</div>
+</div>        
+        
+        
+        
+        
         <div id="social">
     <h2>Get Social with <big>UWMadisonCALS</big></h2>
     <ul>

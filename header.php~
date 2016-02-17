@@ -31,16 +31,33 @@
 <script src="https://npmcdn.com/flickity@1.1/dist/flickity.pkgd.min.js"></script>
 <link rel="stylesheet" href="https://npmcdn.com/flickity@1.1/dist/flickity.min.css">
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/main.css">
-
+    <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/kiosk.js"></script>
+        <link href="kiosk.css" type="text/css" rel="stylesheet" />
 <script type="text/javascript">
+
+
+
     $(document).ready(function() {  
   getWeather(); //Get the initial weather.
   setInterval(getWeather, 600000); //Update the weather every 10 minutes.
+            getLocation('0573','kiosk');
+          getLocation('0184','kiosk');
+          setPage();
 });
+
+setInterval(function() {
+    setPage();
+}, 69000)
+
+
+function setPage() {
+    update('0573', 'Eastbound ','kiosk');
+    update('0184', 'Westbound ','kiosk');
+}
 
 function getWeather() {
       $.simpleWeather({
-    woeid: '28289409', //12781045
+    woeid: '12781045', //12781045
     unit: 'f',
     success: function(weather) {
       html = '<i class="icon-'+weather.code+'"></i>';
@@ -57,18 +74,6 @@ function getWeather() {
 }
 
 $(document).ready(function(){
-  /*$(".owl-carousel").owlCarousel({
-		items:1,
-		loop:true,
-		autoplay:true,
-		autoplayTimeout:11111,
-		smartSpeed:777,
-		mouseDrag: false,
-		lazyLoad: false,
-        lazyContent: false,
-        transitionStyle : false,
-	});*/
-	
 	
 	$('.main-gallery').flickity({
 	  // options
@@ -79,7 +84,8 @@ $(document).ready(function(){
 	  autoPlay: 12000,
 	  wrapAround: true,
 	  prevNextButtons: false,
-	  pageDots: false
+	  pageDots: false,
+	  pauseAutoPlayOnHover: false
 	});
 	
 	var windowW = $(window).width();
