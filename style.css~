@@ -267,7 +267,7 @@ i {
     width:50%;
 }
 #weather .desc h3 { 
-    font-size: 2em;
+    font-size: 2.28em;
     color: rgba(255,255,255,0.7);
     font-weight: normal;
     text-align: left;
@@ -285,7 +285,6 @@ i {
 .busTimes {
 	margin: 10px;
 	position: relative;
-	top:-3.5em;
 	color: rgba(255,255,255,0.8);
 }
 .busTimes .title {
@@ -296,17 +295,13 @@ i {
 .busTimes .direction {
 	font-weight: bold;
 }
-.busTimes #location {
-	display: block;
+.busTimes #busStopID {
 	font-size: 19px;
-	line-height: 18px;
-}
-.busTimes .estimate {
-	font-size: 16px;
-	line-height: 17px;
+	line-height: 20px;
+	text-align: center;
 }
 
-.busTimes .col2 {
+.busTimes .col2, .busTimes .col1 {
 	margin-top:1em;
 }
 .busTimes .arrival {
@@ -314,8 +309,30 @@ i {
 	font-size: 18px;
 }
 .busTimes .coming-soon {
-	font-weight: bold;
+	font-weight: bold; 
+	-webkit-animation: glow 30s ease-in-out infinite;
+  animation: glow 30s ease-in-out infinite;
 }
+
+@-webkit-keyframes glow 
+{
+  50% { color: ; }
+}
+
+@keyframes glow 
+{
+  10% { color: white; }
+  20% { color:Lime 	; }
+  30% { color: white; }
+  40% { color:Yellow 	; }
+  50% { color: white; }
+  60% { color:Tomato 	; }
+  70% { color: white; }  
+  80% { color:Violet 	; }
+  90% { color: white; }
+  100% { color:LightSkyBlue 	; }
+}
+/* LightSkyBlue, Lime, Yellow, Tomato, Violet */
 
 /* Social Icons */
 

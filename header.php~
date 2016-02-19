@@ -21,18 +21,15 @@
 	<![endif]-->
 	<?php wp_head(); ?>
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js" charset="utf-8"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.simpleWeather.js" charset="utf-8"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.slides.min.js" charset="utf-8"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/owl.carousel.min.js"></script>
-<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/owl.carousel.min.css">
-<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/owl.theme.default.min.css">
-<link href='https://fonts.googleapis.com/css?family=Pontano+Sans|Open+Sans:300,700|Quicksand:300,400|Roboto+Mono:300' rel='stylesheet' type='text/css'>
+	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.simpleWeather.js" charset="utf-8"></script>
+	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.slides.min.js" charset="utf-8"></script>
+	<link href='https://fonts.googleapis.com/css?family=Pontano+Sans|Open+Sans:300,700|Quicksand:300,400|Roboto+Mono:300' rel='stylesheet' type='text/css'>
 
-<script src="https://npmcdn.com/flickity@1.1/dist/flickity.pkgd.min.js"></script>
-<link rel="stylesheet" href="https://npmcdn.com/flickity@1.1/dist/flickity.min.css">
+	<script src="https://npmcdn.com/flickity@1.1/dist/flickity.pkgd.min.js"></script>
+	<link rel="stylesheet" href="https://npmcdn.com/flickity@1.1/dist/flickity.min.css">
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/main.css">
-    <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/kiosk.js"></script>
-        <link href="kiosk.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/kiosk.js"></script>
+
 <script type="text/javascript">
 
 
@@ -47,7 +44,7 @@
 
 setInterval(function() {
     setPage();
-}, 69000)
+}, 33333)
 
 
 function setPage() {
@@ -57,7 +54,7 @@ function setPage() {
 
 function getWeather() {
       $.simpleWeather({
-    woeid: '12781045', //12781045
+    woeid: '12602141', //12781045
     unit: 'f',
     success: function(weather) {
       html = '<i class="icon-'+weather.code+'"></i>';
