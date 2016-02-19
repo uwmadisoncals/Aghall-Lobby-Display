@@ -54,7 +54,7 @@ function setPage() {
 
 function getWeather() {
       $.simpleWeather({
-    woeid: '91395262', //12781045
+    woeid: '12781045', //12781045
     unit: 'f',
     success: function(weather) {
       html = '<i class="icon-'+weather.code+'"></i>';
