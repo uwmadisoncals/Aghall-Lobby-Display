@@ -302,37 +302,29 @@ i {
 }
 
 .busTimes .col2, .busTimes .col1 {
-	margin-top:1em;
+	margin-top:2em;
 }
 .busTimes .arrival {
-	margin-left: 1em;
+	margin-left: 2em;
 	font-size: 18px;
+	line-height: 1.5;
 }
 .busTimes .coming-soon {
-	font-weight: bold; 
-	-webkit-animation: glow 30s ease-in-out infinite;
-  animation: glow 30s ease-in-out infinite;
+	font-weight: bold; */
+	-webkit-animation: glow 3s ease-in-out infinite;
+  animation: glow 3s ease-in-out infinite;
 }
 
 @-webkit-keyframes glow 
 {
-  50% { color: ; }
+  50% { color: #A1DE16 ; }
 }
 
 @keyframes glow 
 {
-  10% { color: white; }
-  20% { color:Lime 	; }
-  30% { color: white; }
-  40% { color:Yellow 	; }
-  50% { color: white; }
-  60% { color:Tomato 	; }
-  70% { color: white; }  
-  80% { color:Violet 	; }
-  90% { color: white; }
-  100% { color:LightSkyBlue 	; }
+	50% { color: #A1DE16; }
+
 }
-/* LightSkyBlue, Lime, Yellow, Tomato, Violet */
 
 /* Social Icons */
 

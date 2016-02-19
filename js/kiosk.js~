@@ -46,20 +46,23 @@ function arrivalsCallback(jsondata) {
         stopID = jsondata.stop.stopID;
       	timestamp = jsondata.timestamp;
         $("#"+stopID+"-estimates").replaceWith('<div id="'+stopID+'-estimates" class="estimates"><div class="title"><span class="direction">'+metro_direction[stopID]+'</span> buses:</div>');
+        if(!metro_location[stopID]) {
+				        metro_location[stopID] = "outside";
+        }                
         $("#busStopID").replaceWith('<div id="busStopID"><span id="location">' + metro_location[stopID] + '</span> @ <span class="estimate">' + timestamp + 'ish</span></div>');
 
         var routes = jsondata.stop.route;
         for( var i=0; i < routes.length; i++ ) {
           	var routeID = routes[i].routeID;
           	var minutes = routes[i].minutes;
-      	    if (i>5) {
+      	    if (i>3) {
                 // limit number of rows
                 $("#"+stopID+"-estimates").append('<span class="arrival"> ... and a #'+routeID+' in '+minutes+' min </span>'); 
                 return true;
             } 
           	var destination = routes[i].destination;
           	destination = destination.substring(0,22); //limit the length in case of long ones (unknown risk)
-          	if (minutes<6) {
+          	if (minutes<5) {
                 time = '<div class="arrival"><span class="coming-soon">#<span class="route-label">'+routeID+'</span> to <span class="destination-abbrev">'+destination+'</span> in <span class="minutes">'+minutes+'</span> min</span></div>';
       	    } else {
                 time = '<div class="arrival">#<span class="route-label">'+routeID+'</span> to <span class="destination-text">'+destination+'</span> in <span class="minutes">'+minutes+'</span> min</span></div>';
