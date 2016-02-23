@@ -43,7 +43,7 @@ body {
   font: 13px 'Open Sans', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
-#colophon, .entry-footer {
+.entry-footer {
   display:none;
 }
 
@@ -165,10 +165,10 @@ body {
    box-shadow: 0px 3px 34px rgba(0,0,0,0.4);
    margin-right: auto;
 }
-.site-branding img {
+.sidebar .site-branding img {
   width:100%;
 }
-.site-header, .widget {
+.sidebar .site-header, .widget {
   padding:0 12%;
   margin:13% 0;
 }
@@ -310,19 +310,23 @@ i {
 	line-height: 1.5;
 }
 .busTimes .coming-soon {
-	font-weight: bold; */
-	-webkit-animation: glow 3s ease-in-out infinite;
-  animation: glow 3s ease-in-out infinite;
+	-webkit-animation: glow 4s ease-in-out infinite;
+  animation: glow 4s ease-in-out infinite;
+				font-size:1.001em;
+				}
+.busTimes .coming-soon .minutes {
+		font-weight: bold;
 }
-
 @-webkit-keyframes glow 
 {
-  50% { color: #A1DE16 ; }
+  50% { color: #A1DE16 ; 
+				font-size:1.01em;}
 }
 
 @keyframes glow 
 {
-	50% { color: #A1DE16; }
+	50% { color: #A1DE16;
+				font-size:1.013em;}
 
 }
 
@@ -347,14 +351,72 @@ i {
     font-size:inherit;
     font-weight: 500;
 }
-#social li {
+#sidebar #social li {
   display: inline-block;
   padding: 4px 6px;
 }
-#social li img {
+#sidebar #social li img {
     width:2.7em;
 }
 
+
+/* HORIZONTAL FOOTER */
+
+
+.site-footer {
+	z-index: 5;
+   background-color: rgba(0,0,0,.8);
+   color:white;
+   position:fixed;
+   bottom:0;
+   right:0;
+   left:0;
+   box-shadow: 0px -2px 4px rgba(0,0,0,0.4);
+	margin: 0;
+	width:initial;
+	height: 100px !important;
+}
+
+.site-footer .site-branding {
+	margin: 15px;	
+}
+
+.site-footer .social {
+	position: absolute;
+	right:0;
+}
+.site-footer .social .socialIcons li:first-of-type{
+	display: inline;
+}
+.site-footer .social .socialIcons li {
+	display: none;
+	padding:0;
+	margin:0;
+}
+.site-footer .social .socialIcons li img {
+	width: 80px;
+	margin:10px;
+}
+.site-footer .social h2 {
+	font-size: .9em;
+	text-align: center;
+	transform: rotate(40deg);
+	width: 120px;
+	margin-top: 25px;
+	position: absolute;
+	right: 80px;
+}
+.site-footer h2, .site-footer ul {
+	display: inline-block;
+	margin:0;
+}
+.site-footer .social ul li {
+	display: inline
+}
+
+.site-footer .site-branding, .site-footer .busTimes, .site-footer .social {
+	float: left;
+}
 
 
 @media (max-width: 1290px) {
