@@ -19,7 +19,7 @@
 				<button class="secondary-toggle"><?php _e( 'Menu and widgets', 'twentyfifteen' ); ?></button>
 			</div><!-- .site-branding -->
 		</header><!-- .site-header -->
-        <div id="weather"></div>
+        <div class="weather"></div>
 		
 		<div class="busTimes">
 			<div class="colleft">
@@ -56,7 +56,7 @@
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cals_logo_bw.svg" />
 			</div><!-- .site-branding -->
 
-		        <div id="weather"></div>
+		        <div class="weather"></div>
 		        
 		        
 		<div class="busTimes">
@@ -78,6 +78,7 @@
         <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/twitter.png" /></li>
         <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/instagram.png" /></li></li> 
         <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/pinterest.png" /></li>
+        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/reddit.png" /></li>
         <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/flickr.png" /></li> 
         <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/linkedin.png" /></li></li> 
     </ul>

@@ -61,10 +61,10 @@ function getWeather() {
       html += '<h2>'+weather.temp+'<nogap>&deg;</nogap></h2>';
       html += '<div class="desc"><h3 class="currently">'+weather.currently+'</h3></div>';
   
-      $("#weather").html(html);
+      $(".weather").html(html);
     },
     error: function(error) {
-      $("#weather").html('<p>'+error+'</p>');
+      $(".weather").html('<p>'+error+'</p>');
     }
   });
 

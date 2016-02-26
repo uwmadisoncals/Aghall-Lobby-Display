@@ -165,6 +165,9 @@ body {
    box-shadow: 0px 3px 34px rgba(0,0,0,0.4);
    margin-right: auto;
 }
+.sidebar .site-branding {
+	padding-right: 0;
+}
 .sidebar .site-branding img {
   width:100%;
 }
@@ -175,7 +178,7 @@ body {
 
 /* Weather Display */
 
-#weather {
+.sidebar .weather {
 	font-size:2rem;
    width:90%;
    margin: 0px auto 0;
@@ -184,7 +187,7 @@ body {
   top:-80px;
   position: relative;
 }
-i {
+.sidebar i {
   color: rgba(255,255,255,0.6);
   font-family: weather;
   font-size: 18.48em;
@@ -240,7 +243,7 @@ i {
 .icon-46:before { content: "U"; }
 .icon-47:before { content: "S"; }
 
-#weather h2 {
+.sidebar .weather h2 {
   font-size: 5em;
   color: rgba(255,255,255,0.7);
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
@@ -251,13 +254,13 @@ i {
   font-family:"quicksand",Arial, "Lucida Grande", sans-serif;
   letter-spacing: -10px;
 }
-#weather nogap {
+.sidebar .weather nogap {
     margin-left: -2px;
     font-weight: normal;
     font-size: .7em;
     vertical-align: text-top;
 }
-#weather .desc {
+.sidebar .weather .desc {
 	display: flex;
 	align-items: center;
     height: 60px;
@@ -266,7 +269,7 @@ i {
  	 top:300px;
     width:50%;
 }
-#weather .desc h3 { 
+.sidebar .weather .desc h3 { 
     font-size: 2.28em;
     color: rgba(255,255,255,0.7);
     font-weight: normal;
@@ -275,7 +278,7 @@ i {
     letter-spacing: -4px;
 	line-height: .963;
 }
-#weather .currently {
+.weather .currently {
   margin: 0px;
   padding: 0px;
 }
@@ -310,8 +313,8 @@ i {
 	line-height: 1.5;
 }
 .busTimes .coming-soon {
-	-webkit-animation: glow 4s ease-in-out infinite;
-  animation: glow 4s ease-in-out infinite;
+	-webkit-animation: glow 3s ease-in-out infinite;
+  animation: glow 3s ease-in-out infinite;
 				font-size:1.001em;
 				}
 .busTimes .coming-soon .minutes {
@@ -373,17 +376,91 @@ i {
    left:0;
    box-shadow: 0px -2px 4px rgba(0,0,0,0.4);
 	margin: 0;
+	padding:0;
 	width:initial;
-	height: 100px !important;
+	height: 95px !important;
 
-	/* TEMPORARILY HIDDEN */
+	/* TEMPORARILY HIDDEN
 	display: none;	
-	
+	 */
+}
+
+.site-footer .site-branding, .site-footer .weather, .site-footer .busTimes, .site-footer .social {
+	float: left;
+}
+
+.site-footer .weather {
+	font-size: 5rem;
+   font-family:"quicksand",Arial, "Lucida Grande", sans-serif;
+   display:flex;
+  color: rgba(255,255,255,0.8);
+}
+
+.site-footer i {
+  color: rgba(255,255,255,0.6);
+  font-family: weather;
+  font-size: 2em;
+  font-style: normal;
+  float:left;
+}
+.site-footer .weather h2 {
+	font-size: 1em;
+   font-family:"quicksand",Arial, "Lucida Grande", sans-serif;
+  letter-spacing: -4px;
+	display: flex;
+	align-items: center;
+	padding: 10px;
+}
+.site-footer .weather .desc {
+	display: flex;
+	align-items: center;
+  letter-spacing: -2px;
+	float:right;
+	width: 150px;
+}
+.site-footer .weather .desc h3 {
+	font-size: .5em;
 }
 
 .site-footer .site-branding {
-	margin: 15px;	
+	margin: 15px;
+	padding-right: 15px;
 }
+
+.site-footer .colleft {
+	display: flex;
+}
+.site-footer .busTimes #busStopID, 
+.site-footer .busTimes .col1, 
+.site-footer .busTimes .col2 {
+	flex:0 2 420px;
+	margin-top:0;
+	align-items: center;
+}
+
+.site-footer .busTimes #busStopID {
+		flex: 0 1 130px;
+		margin: .4em .8em 0 0;
+}
+.site-footer .busTimes .arrival {
+	padding-left: 60px;
+}
+.site-footer .busTimes .estimates {
+	position: relative;
+}
+.site-footer .busTimes .title {
+	position: absolute;
+	left:0;
+	top:25px;
+	transform: rotate(-40deg);
+	font-size:18px;
+}
+.site-footer .busTimes .title .direction {
+	display: block;
+}
+
+
+
 
 .site-footer .social {
 	position: absolute;
@@ -398,17 +475,17 @@ i {
 	margin:0;
 }
 .site-footer .social .socialIcons li img {
-	width: 80px;
+	width: 70px;
 	margin:10px;
 }
 .site-footer .social h2 {
-	font-size: .9em;
+	font-size: .8em;
 	text-align: center;
 	transform: rotate(40deg);
 	width: 120px;
 	margin-top: 25px;
 	position: absolute;
-	right: 80px;
+	right: 65px;
 }
 .site-footer h2, .site-footer ul {
 	display: inline-block;
@@ -418,27 +495,29 @@ i {
 	display: inline
 }
 
-.site-footer .site-branding, .site-footer .busTimes, .site-footer .social {
-	float: left;
-}
 
 
 @media (max-width: 1290px) {
-	i {
+	.sidebar i {
 		font-size: 11em;	
 	}
-	#weather {
+	.sidebar .weather {
  		top:-50px;
 	}
-	#weather h2 {
+	.sidebar .weather h2 {
 		font-size: 4em;
  		 top:150px;
 	}
-	#weather .desc h3 {
+	.sidebar .weather .desc h3 {
 		font-size: 1.8em;
 	}
-	#weather .desc {
+	.sidebar .weather .desc {
 		height: 20px;	
  	   top:190px;
+	}
+	.site-header {
+		background-color: initial;
+		border-bottom:none;
+		padding:0;
 	}
 }
