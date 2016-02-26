@@ -285,7 +285,7 @@ body {
 
 /* Bus Times */
 
-.busTimes {
+.sidebar .busTimes {
 	margin: 10px;
 	position: relative;
 	color: rgba(255,255,255,0.8);
@@ -378,7 +378,7 @@ body {
 	margin: 0;
 	padding:0;
 	width:initial;
-	height: 95px !important;
+	height: 90px !important;
 
 	/* TEMPORARILY HIDDEN
 	display: none;	
@@ -394,6 +394,7 @@ body {
    font-family:"quicksand",Arial, "Lucida Grande", sans-serif;
    display:flex;
   color: rgba(255,255,255,0.8);
+  margin-top: -5px;
 }
 
 .site-footer i {
@@ -429,6 +430,7 @@ body {
 
 .site-footer .colleft {
 	display: flex;
+	margin-top: 5px;
 }
 .site-footer .busTimes #busStopID, 
 .site-footer .busTimes .col1, 
@@ -440,10 +442,10 @@ body {
 
 .site-footer .busTimes #busStopID {
 		flex: 0 1 130px;
-		margin: .4em 15px 0 0;
+		margin: .5em 1em 0 0;
 }
 .site-footer .busTimes .arrival {
-	padding-left: 60px;
+	padding-left: 55px;
 }
 .site-footer .busTimes .estimates {
 	position: relative;
@@ -451,8 +453,8 @@ body {
 .site-footer .busTimes .title {
 	position: absolute;
 	left:0;
-	top:25px;
-	transform: rotate(-40deg);
+	top:27px;
+	transform: rotate(-45deg);
 	font-size:18px;
 }
 .site-footer .busTimes .title .direction {
@@ -481,7 +483,7 @@ body {
 .site-footer .social h2 {
 	font-size: .8em;
 	text-align: center;
-	transform: rotate(40deg);
+	transform: rotate(45deg);
 	width: 120px;
 	margin-top: 25px;
 	position: absolute;
