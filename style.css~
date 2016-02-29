@@ -385,20 +385,20 @@ body {
 	 */
 }
 
-.site-footer .site-branding, .site-footer .weather, .site-footer .busTimes, .site-footer .social {
+.site-footer .site-branding, .site-footer .weather, .site-footer .busTimes {
 	float: left;
+  color: rgba(255,255,255,.8);
 }
 
 .site-footer .weather {
 	font-size: 5rem;
    font-family:"quicksand",Arial, "Lucida Grande", sans-serif;
    display:flex;
-  color: rgba(255,255,255,0.8);
   margin-top: -5px;
+  padding-right: 1em;
 }
 
 .site-footer i {
-  color: rgba(255,255,255,0.6);
   font-family: weather;
   font-size: 2em;
   font-style: normal;
@@ -427,6 +427,9 @@ body {
 	margin: 15px;
 	padding-right: 15px;
 }
+.site-footer .site-branding img, .site-footer .social .socialIcons li img {
+	opacity: .9;
+}
 
 .site-footer .colleft {
 	display: flex;
@@ -435,7 +438,7 @@ body {
 .site-footer .busTimes #busStopID, 
 .site-footer .busTimes .col1, 
 .site-footer .busTimes .col2 {
-	flex:0 2 420px;
+	flex:0 2 430px;
 	margin-top:0;
 	align-items: center;
 }
@@ -467,6 +470,7 @@ body {
 .site-footer .social {
 	position: absolute;
 	right:0;
+  color: rgba(255,255,255,.8);
 }
 .site-footer .social .socialIcons li:first-of-type{
 	display: inline;
