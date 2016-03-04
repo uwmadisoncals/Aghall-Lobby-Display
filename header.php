@@ -36,7 +36,7 @@
 
     $(document).ready(function() {  
   getWeather(); //Get the initial weather.
-  setInterval(getWeather, 600000); //Update the weather every 10 minutes.
+  setInterval(getWeather, 300000); //Update the weather every 5 minutes.
             getLocation('0573','kiosk');
           getLocation('0184','kiosk');
           setPage();
@@ -44,7 +44,7 @@
 
 setInterval(function() {
     setPage();
-}, 33333)
+}, 22222)
 
 
 function setPage() {
