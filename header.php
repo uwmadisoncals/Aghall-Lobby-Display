@@ -82,7 +82,8 @@ $(document).ready(function(){
 	  wrapAround: true,
 	  prevNextButtons: false,
 	  pageDots: false,
-	  pauseAutoPlayOnHover: false
+	  pauseAutoPlayOnHover: false,
+	  setGallerySize: false
 	});
 	
 	var windowW = $(window).width();
@@ -91,13 +92,21 @@ $(document).ready(function(){
 	
 	$(".mask").css("margin-left",newWidth);
 	
-	$(window).resize(function() {
+	function resizeCheck() {
 		var windowW = $(window).width();
-	var sideW = $(".sidebar").width();
-	var newWidth = windowW - sideW;
+		var sideW = $(".sidebar").width();
+		var newWidth = windowW - sideW;
 	
-	$(".mask").css("margin-left",newWidth);
+		$(".mask").css("margin-left",newWidth);
+	}
+
+	$(window).resize(function() {
+		resizeCheck();
 	});
+
+	setInterval(function() {
+		resizeCheck();
+	},5000);
 });
 
 
