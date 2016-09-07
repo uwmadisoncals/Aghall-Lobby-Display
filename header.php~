@@ -25,8 +25,8 @@
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.slides.min.js" charset="utf-8"></script>
 	<link href='https://fonts.googleapis.com/css?family=Pontano+Sans|Open+Sans:300,700|Quicksand:300,400|Roboto+Mono:300' rel='stylesheet' type='text/css'>
 
-	<script src="https://npmcdn.com/flickity@1.1/dist/flickity.pkgd.min.js"></script>
-	<link rel="stylesheet" href="https://npmcdn.com/flickity@1.1/dist/flickity.min.css">
+	<script src="https://unpkg.com/flickity@1.1/dist/flickity.pkgd.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/flickity@1.1/dist/flickity.min.css">
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/main.css">
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/kiosk.js"></script>
 
