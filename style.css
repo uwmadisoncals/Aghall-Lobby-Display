@@ -269,7 +269,7 @@ body {
  	 top:300px;
     width:50%;
 }
-.sidebar .weather .desc h3 { 
+.sidebar .weather .desc h3 {
     font-size: 2.28em;
     color: rgba(255,255,255,0.7);
     font-weight: normal;
@@ -312,7 +312,7 @@ body {
 	font-size: 18px;
 	line-height: 1.5;
 }
-.busTimes .arrival .route-label, 
+.busTimes .arrival .route-label,
 .busTimes .arrival .destination-text,
 .busTimes .arrival .destination-abbrev,
 .busTimes .arrival .minutes {
@@ -326,13 +326,13 @@ body {
 .busTimes .coming-soon .minutes {
 		font-weight: bold;
 }
-@-webkit-keyframes glow 
+@-webkit-keyframes glow
 {
-  50% { color: #A1DE16 ; 
+  50% { color: #A1DE16 ;
 				font-size:1.01em;}
 }
 
-@keyframes glow 
+@keyframes glow
 {
 	50% { color: #A1DE16;
 				font-size:1.013em;}
@@ -386,9 +386,9 @@ body {
 	width:initial;
 	height: 90px !important;
 
-	/* TEMPORARILY HIDDEN
-	display: none;	
-	 */
+	 /*TEMPORARILY HIDDEN*/
+	display: none;
+
 }
 
 .site-footer .site-branding, .site-footer .weather, .site-footer .busTimes {
@@ -441,8 +441,8 @@ body {
 	display: flex;
 	margin-top: 5px;
 }
-.site-footer .busTimes #busStopID, 
-.site-footer .busTimes .col1, 
+.site-footer .busTimes #busStopID,
+.site-footer .busTimes .col1,
 .site-footer .busTimes .col2 {
 	flex:0 2 430px;
 	margin-top:0;
@@ -511,7 +511,7 @@ body {
 
 @media (max-width: 1290px) {
 	.sidebar i {
-		font-size: 11em;	
+		font-size: 11em;
 	}
 	.sidebar .weather {
  		top:-50px;
@@ -524,7 +524,7 @@ body {
 		font-size: 1.8em;
 	}
 	.sidebar .weather .desc {
-		height: 20px;	
+		height: 20px;
  	   top:190px;
 	}
 	.site-header {

@@ -27,7 +27,8 @@
 
 	<script src="https://unpkg.com/flickity@1.1/dist/flickity.pkgd.min.js"></script>
 	<link rel="stylesheet" href="https://unpkg.com/flickity@1.1/dist/flickity.min.css">
-<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/main.css">
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/main.css">
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/kiosk.js"></script>
 
 <script type="text/javascript">
