@@ -25,8 +25,8 @@
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.slides.min.js" charset="utf-8"></script>
 	<link href='https://fonts.googleapis.com/css?family=Pontano+Sans|Open+Sans:300,700|Quicksand:300,400|Roboto+Mono:300' rel='stylesheet' type='text/css'>
 
-	<script src="https://npmcdn.com/flickity@1.1/dist/flickity.pkgd.min.js"></script>
-	<link rel="stylesheet" href="https://npmcdn.com/flickity@1.1/dist/flickity.min.css">
+	<script src="https://unpkg.com/flickity@1.1/dist/flickity.pkgd.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/flickity@1.1/dist/flickity.min.css">
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/main.css">
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/kiosk.js"></script>
 
@@ -34,7 +34,7 @@
 
 
 
-    $(document).ready(function() {  
+    $(document).ready(function() {
   getWeather(); //Get the initial weather.
   setInterval(getWeather, 600000); //Update the weather every 10 minutes.
             getLocation('0573','kiosk');
@@ -60,18 +60,18 @@ function getWeather() {
       html = '<i class="icon-'+weather.code+'"></i>';
       html += '<h2>'+weather.temp+'<nogap>&deg;</nogap></h2>';
       html += '<div class="desc"><h3 class="currently">'+weather.currently+'</h3></div>';
-  
-      $("#weather").html(html);
+
+      $(".weather").html(html);
     },
     error: function(error) {
-      $("#weather").html('<p>'+error+'</p>');
+      $(".weather").html('<p>'+error+'</p>');
     }
   });
 
 }
 
 $(document).ready(function(){
-	
+
 	$('.main-gallery').flickity({
 	  // options
 	  cellSelector: '.gallery-cell',
@@ -85,18 +85,18 @@ $(document).ready(function(){
 	  pauseAutoPlayOnHover: false,
 	  setGallerySize: false
 	});
-	
+
 	var windowW = $(window).width();
 	var sideW = $(".sidebar").width();
 	var newWidth = windowW - sideW;
-	
+
 	$(".mask").css("margin-left",newWidth);
-	
+
 	function resizeCheck() {
 		var windowW = $(window).width();
 		var sideW = $(".sidebar").width();
 		var newWidth = windowW - sideW;
-	
+
 		$(".mask").css("margin-left",newWidth);
 	}
 
@@ -109,12 +109,12 @@ $(document).ready(function(){
 	},5000);
 });
 
-
 $(document).ready(function(){
 function tick(){
     $('.site-footer .socialIcons li:first').animate({'opacity':0}, 200, function () {
     $(this).appendTo($('.site-footer .socialIcons')).css('opacity', 1); });
 }
+
 setInterval(function(){ tick () }, 4000);
 
 });
