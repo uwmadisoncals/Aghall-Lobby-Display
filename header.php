@@ -109,12 +109,12 @@ $(document).ready(function(){
 	},5000);
 });
 
-
 $(document).ready(function(){
 function tick(){
     $('.site-footer .socialIcons li:first').animate({'opacity':0}, 200, function () {
     $(this).appendTo($('.site-footer .socialIcons')).css('opacity', 1); });
 }
+
 setInterval(function(){ tick () }, 4000);
 
 });
