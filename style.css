@@ -369,7 +369,7 @@ body {
 }
 
 
-/* HORIZONTAL FOOTER */
+/* HORIZONTAL FOOTER
 
 
 .site-footer {
@@ -386,7 +386,7 @@ body {
 	width:initial;
 	height: 90px !important;
 
-	 /*TEMPORARILY HIDDEN*/
+	 /*TEMPORARILY HIDDEN
 	display: none;
 
 }
@@ -507,7 +507,7 @@ body {
 	display: inline
 }
 
-
+*/
 
 @media (max-width: 1290px) {
 	.sidebar i {

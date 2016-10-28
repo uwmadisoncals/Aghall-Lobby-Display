@@ -10,7 +10,7 @@
  */
 ?>
 
-	<!--</div>.site-content -->
+	</div><!--.site-content -->
 
 	<div id="sidebar" class="sidebar">
 		<header id="masthead" class="site-header" role="banner">
@@ -49,12 +49,12 @@
 </div>
 	</div><!-- .sidebar -->
 
-
+<!--
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
 			<div class="site-branding">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cals_logo_bw.svg" />
-			</div><!-- .site-branding -->
+			</div><!-- .site-branding --
 
 		        <div id="weather"></div>
 
