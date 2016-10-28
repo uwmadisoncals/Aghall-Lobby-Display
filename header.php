@@ -31,6 +31,7 @@
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/kiosk.js"></script>
 
 <script type="text/javascript">
+
     $(document).ready(function() {
   getWeather(); //Get the initial weather.
   setInterval(getWeather, 600000); //Update the weather every 10 minutes.
@@ -41,7 +42,8 @@
 
 setInterval(function() {
     setPage();
-	}, 33333)
+}, 33333)
+
 
 function setPage() {
     update('0573', 'Eastbound ','kiosk');
@@ -57,12 +59,13 @@ function getWeather() {
       html += '<h2>'+weather.temp+'<nogap>&deg;</nogap></h2>';
       html += '<div class="desc"><h3 class="currently">'+weather.currently+'</h3></div>';
 
-      $(".weather").html(html);
+      $("#weather").html(html);
     },
     error: function(error) {
-      $(".weather").html('<p>'+error+'</p>');
+      $("#weather").html('<p>'+error+'</p>');
     }
   });
+
 }
 
 $(document).ready(function(){
@@ -77,7 +80,8 @@ $(document).ready(function(){
 	  wrapAround: true,
 	  prevNextButtons: false,
 	  pageDots: false,
-	  pauseAutoPlayOnHover: false
+	  pauseAutoPlayOnHover: false,
+	  setGallerySize: false
 	});
 
 	var windowW = $(window).width();
@@ -86,21 +90,33 @@ $(document).ready(function(){
 
 	$(".mask").css("margin-left",newWidth);
 
-	$(window).resize(function() {
+	function resizeCheck() {
 		var windowW = $(window).width();
-	var sideW = $(".sidebar").width();
-	var newWidth = windowW - sideW;
+		var sideW = $(".sidebar").width();
+		var newWidth = windowW - sideW;
 
-	$(".mask").css("margin-left",newWidth);
+		$(".mask").css("margin-left",newWidth);
+	}
+
+	$(window).resize(function() {
+		resizeCheck();
 	});
+
+	setInterval(function() {
+		resizeCheck();
+	},5000);
 });
+
+
 $(document).ready(function(){
 function tick(){
-    $('.site-footer .socialIcons li:first').animate({'opacity':0}, 0, function () {
+    $('.site-footer .socialIcons li:first').animate({'opacity':0}, 200, function () {
     $(this).appendTo($('.site-footer .socialIcons')).css('opacity', 1); });
 }
-setInterval(function(){ tick () }, 3333);
+setInterval(function(){ tick () }, 4000);
+
 });
+
 </script>
 </head>
 
