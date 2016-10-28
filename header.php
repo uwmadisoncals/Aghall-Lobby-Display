@@ -13,7 +13,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">
-	<META HTTP-EQUIV="refresh" CONTENT="7200">
+	<META HTTP-EQUIV="refresh" CONTENT="1800">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<!--[if lt IE 9]>
@@ -34,9 +34,9 @@
 
 
 
-    $(document).ready(function() {  
+    $(document).ready(function() {
   getWeather(); //Get the initial weather.
-  setInterval(getWeather, 300000); //Update the weather every 5 minutes.
+  setInterval(getWeather, 600000); //Update the weather every 10 minutes.
             getLocation('0573','kiosk');
           getLocation('0184','kiosk');
           setPage();
@@ -44,7 +44,7 @@
 
 setInterval(function() {
     setPage();
-}, 22222)
+}, 33333)
 
 
 function setPage() {
@@ -60,7 +60,7 @@ function getWeather() {
       html = '<i class="icon-'+weather.code+'"></i>';
       html += '<h2>'+weather.temp+'<nogap>&deg;</nogap></h2>';
       html += '<div class="desc"><h3 class="currently">'+weather.currently+'</h3></div>';
-  
+
       $(".weather").html(html);
     },
     error: function(error) {
@@ -71,7 +71,7 @@ function getWeather() {
 }
 
 $(document).ready(function(){
-	
+
 	$('.main-gallery').flickity({
 	  // options
 	  cellSelector: '.gallery-cell',
@@ -82,31 +82,40 @@ $(document).ready(function(){
 	  wrapAround: true,
 	  prevNextButtons: false,
 	  pageDots: false,
-	  pauseAutoPlayOnHover: false
+	  pauseAutoPlayOnHover: false,
+	  setGallerySize: false
 	});
-	
+
 	var windowW = $(window).width();
 	var sideW = $(".sidebar").width();
 	var newWidth = windowW - sideW;
-	
+
 	$(".mask").css("margin-left",newWidth);
-	
-	$(window).resize(function() {
+
+	function resizeCheck() {
 		var windowW = $(window).width();
-	var sideW = $(".sidebar").width();
-	var newWidth = windowW - sideW;
-	
-	$(".mask").css("margin-left",newWidth);
+		var sideW = $(".sidebar").width();
+		var newWidth = windowW - sideW;
+
+		$(".mask").css("margin-left",newWidth);
+	}
+
+	$(window).resize(function() {
+		resizeCheck();
 	});
+
+	setInterval(function() {
+		resizeCheck();
+	},5000);
 });
 
 
 $(document).ready(function(){
 function tick(){
-    $('.site-footer .socialIcons li:first').animate({'opacity':0}, 0, function () {
+    $('.site-footer .socialIcons li:first').animate({'opacity':0}, 200, function () {
     $(this).appendTo($('.site-footer .socialIcons')).css('opacity', 1); });
 }
-setInterval(function(){ tick () }, 3333);
+setInterval(function(){ tick () }, 4000);
 
 });
 
