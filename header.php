@@ -27,14 +27,10 @@
 
 	<script src="https://unpkg.com/flickity@1.1/dist/flickity.pkgd.min.js"></script>
 	<link rel="stylesheet" href="https://unpkg.com/flickity@1.1/dist/flickity.min.css">
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/main.css">
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/main.css">
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/kiosk.js"></script>
 
 <script type="text/javascript">
-
-
-
     $(document).ready(function() {
   getWeather(); //Get the initial weather.
   setInterval(getWeather, 600000); //Update the weather every 10 minutes.
@@ -45,8 +41,7 @@
 
 setInterval(function() {
     setPage();
-}, 33333)
-
+	}, 33333)
 
 function setPage() {
     update('0573', 'Eastbound ','kiosk');
@@ -68,7 +63,6 @@ function getWeather() {
       $(".weather").html('<p>'+error+'</p>');
     }
   });
-
 }
 
 $(document).ready(function(){
@@ -83,8 +77,7 @@ $(document).ready(function(){
 	  wrapAround: true,
 	  prevNextButtons: false,
 	  pageDots: false,
-	  pauseAutoPlayOnHover: false,
-	  setGallerySize: false
+	  pauseAutoPlayOnHover: false
 	});
 
 	var windowW = $(window).width();
@@ -93,33 +86,21 @@ $(document).ready(function(){
 
 	$(".mask").css("margin-left",newWidth);
 
-	function resizeCheck() {
-		var windowW = $(window).width();
-		var sideW = $(".sidebar").width();
-		var newWidth = windowW - sideW;
-
-		$(".mask").css("margin-left",newWidth);
-	}
-
 	$(window).resize(function() {
-		resizeCheck();
+		var windowW = $(window).width();
+	var sideW = $(".sidebar").width();
+	var newWidth = windowW - sideW;
+
+	$(".mask").css("margin-left",newWidth);
 	});
-
-	setInterval(function() {
-		resizeCheck();
-	},5000);
 });
-
 $(document).ready(function(){
 function tick(){
-    $('.site-footer .socialIcons li:first').animate({'opacity':0}, 200, function () {
+    $('.site-footer .socialIcons li:first').animate({'opacity':0}, 0, function () {
     $(this).appendTo($('.site-footer .socialIcons')).css('opacity', 1); });
 }
-
-setInterval(function(){ tick () }, 4000);
-
+setInterval(function(){ tick () }, 3333);
 });
-
 </script>
 </head>
 
