@@ -61,7 +61,7 @@ function arrivalsCallback(jsondata) {
                 return true;
             }
           	var destination = routes[i].destination;
-          	destination = destination.substring(0,20); //limit the length in case of long ones (unknown risk)
+          	destination = destination.substring(0,18); //limit the length in case of long ones (unknown risk)
           	if (minutes<5) {
                 time = '<div class="arrival"><span class="coming-soon">#<span class="route-label">'+routeID+'</span> to <span class="destination-abbrev">'+destination+'</span> in <span class="minutes">'+minutes+'</span> min</span></div>';
       	    } else {
