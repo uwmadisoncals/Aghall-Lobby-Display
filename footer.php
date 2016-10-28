@@ -10,7 +10,7 @@
  */
 ?>
 
-	</div><!--.site-content -->
+<!--</div>.site-content -->
 
 	<div id="sidebar" class="sidebar">
 		<header id="masthead" class="site-header" role="banner">
