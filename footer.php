@@ -56,9 +56,6 @@
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cals_logo_bw.svg" />
 			</div><!-- .site-branding --
 
-		        <div id="weather"></div>
-
-
 		<div class="busTimes">
 			<div class="colleft">
 				<div id="busStopID"></div>
