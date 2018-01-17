@@ -1,6 +1,6 @@
 
 //var API_BASE = 'http://livemap.msn-transit-api.appspot.com';
-var API_BASE = 'http://api.smsmybus.com';
+var API_BASE = 'https://api.smsmybus.com';
 
 var metro_direction = [];
 var metro_location = [];
